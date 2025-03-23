@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Pipeline System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.3.4/dist/vue.global.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-router@4.2.5/dist/vue-router.global.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <style>
+    .navbar-brand {
+      font-weight: bold;
+    }
+    .status-badge {
+      font-size: 0.8rem;
+      padding: 0.25rem 0.5rem;
+    }
+    .status-PENDING {
+      background-color: #6c757d;
+    }
+    .status-RUNNING {
+      background-color: #007bff;
+    }
+    .status-COMPLETED {
+      background-color: #28a745;
+    }
+    .status-FAILED {
+      background-color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <!-- App Component -->
+  <script type="module">
+    import App from './components/App.js';
+    import router from './router.js';
+
+    const app = Vue.createApp(App);
+    app.use(router);
+    app.mount('#app');
+  </script>
+</body>
+</html>
